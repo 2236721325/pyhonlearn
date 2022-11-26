@@ -10,7 +10,7 @@ kernel=np.ones((3,3),np.uint8)
 erosion = cv.erode(img,kernel,iterations=1)
 dilation = cv.dilate(img,kernel,iterations = 1)
 
-result=np.hstack((img,erosion,dilation))
+result=np.vstack((img,erosion,dilation))
 
 cv.imshow("result",result)
 
